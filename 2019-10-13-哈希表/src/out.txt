@@ -1,0 +1,104 @@
+Compiled from "Test.java"
+public class Test {
+  public Test();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public int put(int, int);
+    Code:
+       0: iload_1
+       1: aload_0
+       2: getfield      #2                  // Field array:[LTest$Node;
+       5: arraylength
+       6: irem
+       7: istore_3
+       8: aload_0
+       9: getfield      #2                  // Field array:[LTest$Node;
+      12: iload_3
+      13: aaload
+      14: astore        4
+      16: aload         4
+      18: ifnull        57
+      21: iload_1
+      22: aload         4
+      24: invokestatic  #3                  // Method Test$Node.access$000:(LTest$Node;)I
+      27: if_icmpne     47
+      30: aload         4
+      32: invokestatic  #4                  // Method Test$Node.access$100:(LTest$Node;)I
+      35: istore        5
+      37: aload         4
+      39: iload_2
+      40: invokestatic  #5                  // Method Test$Node.access$102:(LTest$Node;I)I
+      43: pop
+      44: iload         5
+      46: ireturn
+      47: aload         4
+      49: getfield      #6                  // Field Test$Node.next:LTest$Node;
+      52: astore        4
+      54: goto          16
+      57: new           #7                  // class Test$Node
+      60: dup
+      61: iload_1
+      62: iload_2
+      63: invokespecial #8                  // Method Test$Node."<init>":(II)V
+      66: astore        4
+      68: aload         4
+      70: aload_0
+      71: getfield      #2                  // Field array:[LTest$Node;
+      74: iload_3
+      75: aaload
+      76: putfield      #6                  // Field Test$Node.next:LTest$Node;
+      79: aload_0
+      80: getfield      #2                  // Field array:[LTest$Node;
+      83: iload_3
+      84: aload         4
+      86: aastore
+      87: aload_0
+      88: dup
+      89: getfield      #9                  // Field size:I
+      92: iconst_1
+      93: iadd
+      94: putfield      #9                  // Field size:I
+      97: iconst_m1
+      98: ireturn
+
+  public int get(int);
+    Code:
+       0: iload_1
+       1: aload_0
+       2: getfield      #2                  // Field array:[LTest$Node;
+       5: arraylength
+       6: irem
+       7: istore_2
+       8: aload_0
+       9: getfield      #2                  // Field array:[LTest$Node;
+      12: iload_2
+      13: aaload
+      14: astore_3
+      15: aload_3
+      16: ifnull        40
+      19: iload_1
+      20: aload_3
+      21: invokestatic  #3                  // Method Test$Node.access$000:(LTest$Node;)I
+      24: if_icmpne     32
+      27: aload_3
+      28: invokestatic  #4                  // Method Test$Node.access$100:(LTest$Node;)I
+      31: ireturn
+      32: aload_3
+      33: getfield      #6                  // Field Test$Node.next:LTest$Node;
+      36: astore_3
+      37: goto          15
+      40: iconst_m1
+      41: ireturn
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: ldc           #10                 // String F:\比特java\2019-10-13-哈希表\src
+       2: astore_1
+       3: getstatic     #11                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       6: aload_1
+       7: invokevirtual #12                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      10: return
+}
